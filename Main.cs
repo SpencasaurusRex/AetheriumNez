@@ -4,14 +4,13 @@ using Microsoft.Xna.Framework.Input;
 
 namespace AetheriumNez
 {
-    public class Main : Game
+    public class Main : Nez.Core
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         
         public Main()
         {
-            graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
 
@@ -22,9 +21,6 @@ namespace AetheriumNez
 
         protected override void LoadContent()
         {
-            // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
-
             // TODO: use this.Content to load your game content here
         }
 
@@ -35,8 +31,8 @@ namespace AetheriumNez
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+            //if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            //    Exit();
 
             // TODO: Add your update logic here
 
